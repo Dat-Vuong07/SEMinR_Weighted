@@ -1,5 +1,5 @@
 list_of_r_code <- c("clean_data.R", "compute_metrics.R", "compute_ten_berge.R", 
-  "data.R", "documentation_utils.R", "estimate_bootstrap.R", 
+  "data.R", "documentation_utils.R", 
   "estimate_cbsem.R", "estimate_factor_scores.R", "estimate_pls.R", 
   "estimate_simplePLS.R", "evaluate_effects.R", "evaluate_measurement_model.R",
   "evaluate_model.R", "evaluate_reliability.R", "evaluate_validity.R", 
@@ -15,10 +15,10 @@ list_of_r_code <- c("clean_data.R", "compute_metrics.R", "compute_ten_berge.R",
   "seminr_info.R", "specify_associations.R", "specify_constructs.R", 
   "specify_interactions.R", "specify_models.R", "specify_relationships.R", 
   "theme_current.R", "theme_defaults.R", "theme.R", 
-  "utils-pipe.R", "zzz.R")
+  "utils-pipe.R", "zzz.R", "estimate_bootstrap.R")
 
 for (i in list_of_r_code) {
   devtools::source_url(paste0("https://raw.githubusercontent.com/Dat-Vuong07/SEMinR_Weighted/main/R%20Code/",i))
 }
 
-weight_vector <- 
+weight_vector <- c(rep(1,100), rep(0,150))
