@@ -20,10 +20,10 @@ To run the code
 **Step 4**: Run this code in a new file. Note: change the path to your local path
 
 ```{r}
-list_file <- list.files(".../*Rcode*")
+list_file <- list.files(".../Rcode")
 
 for (i in list_file) {
-  source(paste0(".../*Rcode*", i))
+  source(paste0(".../Rcode", i))
 }
 
 .onLoad()
